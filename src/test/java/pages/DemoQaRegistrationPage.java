@@ -2,6 +2,7 @@ package pages;
 
 import com.codeborne.selenide.SelenideElement;
 import pages.components.CalendarComponent;
+import testsData.States;
 
 import java.io.File;
 
@@ -81,8 +82,18 @@ public class DemoQaRegistrationPage {
         $("#react-select-3-input").setValue(state).pressEnter();
         return this;
     }
+
+    public DemoQaRegistrationPage setParamState(States state){
+        $("#react-select-3-input").setValue(String.valueOf(state)).pressEnter();
+        return this;
+    }
     public DemoQaRegistrationPage setCity(String city){
         $("#react-select-4-input").setValue(city).pressEnter();
+        return this;
+    }
+
+    public DemoQaRegistrationPage getCity(){
+        $("#city").click();
         return this;
     }
 
