@@ -14,8 +14,6 @@ import testsData.States;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static com.codeborne.selenide.CollectionCondition.texts;
-import static com.codeborne.selenide.Selenide.$$;
 import static tests.TestData.*;
 
 public class DemoQaFormTest extends TestBase{
@@ -90,8 +88,8 @@ public class DemoQaFormTest extends TestBase{
         demoQaRegistrationPage.openRegistrationPage()
 
                 .setParamState(state)
-                .getCity();
-                $$(".css-11unzgr").shouldHave(texts(expectedCities));
+                .getCity()
+                .checkCitiesList(expectedCities);
 
     }
 

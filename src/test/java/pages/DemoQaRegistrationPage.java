@@ -5,7 +5,9 @@ import pages.components.CalendarComponent;
 import testsData.States;
 
 import java.io.File;
+import java.util.List;
 
+import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Selenide.*;
 
 public class DemoQaRegistrationPage {
@@ -109,6 +111,11 @@ public class DemoQaRegistrationPage {
 
     public DemoQaRegistrationPage checkResultsFormData(String lable, String value){
         registrationDataInputResultsForm.checkData(lable, value);
+        return this;
+    }
+
+    public DemoQaRegistrationPage checkCitiesList(List<String> cities){
+        $$(".css-11unzgr").shouldHave(texts(cities));
         return this;
     }
 
