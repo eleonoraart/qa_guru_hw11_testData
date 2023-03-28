@@ -36,3 +36,9 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+task run_registr_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("registration")
+    }
+}

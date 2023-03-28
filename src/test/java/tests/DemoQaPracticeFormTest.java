@@ -1,10 +1,12 @@
 package tests;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static tests.TestData.*;
 
 public class DemoQaPracticeFormTest extends TestBase {
 
+    @Tag("registration")
     @Test
     void studentRegistrationTest(){
 
