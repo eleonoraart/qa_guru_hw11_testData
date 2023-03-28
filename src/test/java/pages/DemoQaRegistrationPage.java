@@ -16,7 +16,7 @@ public class DemoQaRegistrationPage {
 
     CalendarComponent calendarComponent = new CalendarComponent();
     RegistrationDataInputResultsForm registrationDataInputResultsForm = new RegistrationDataInputResultsForm();
-    File file = new File("src/test/resources/хомяк.png");
+
     private SelenideElement
             firstNameInput = $("#firstName"),
             lastNaneInput = $("#lastName"),
@@ -84,7 +84,7 @@ public class DemoQaRegistrationPage {
 
     @Step("Загружаем фотографию")
     public DemoQaRegistrationPage setPicture(){
-        $("#uploadPicture").uploadFile(file);
+        $("#uploadPicture").uploadFromClasspath("pictures/hamster.png");
         return this;
     }
 

@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static tests.TestData.*;
 
-@Tag("registration")
 public class DemoQaPracticeFormTest extends TestBase {
 
+    @Tag("registration")
     @Test
     void studentRegistrationTest(){
 
@@ -33,7 +33,7 @@ public class DemoQaPracticeFormTest extends TestBase {
                 .checkResultsFormData("Date of Birth", bDay + " " + bMonth + "," + bYear)
                 .checkResultsFormData("Subjects", subject)
                 .checkResultsFormData("Hobbies", "Music, Reading")
-                .checkResultsFormData("Picture", "хомяк.png")
+                .checkResultsFormData("Picture", "hamster.png")
                 .checkResultsFormData("Address", useAddress)
                 .checkResultsFormData("State and City", state + " " + city)
                 .checkCloseButtonExist();
