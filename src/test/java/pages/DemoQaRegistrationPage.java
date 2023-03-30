@@ -5,7 +5,6 @@ import io.qameta.allure.Step;
 import pages.components.CalendarComponent;
 import testsData.States;
 
-import java.io.File;
 import java.util.List;
 
 import static com.codeborne.selenide.CollectionCondition.texts;

@@ -31,16 +31,30 @@ dependencies {
     testImplementation 'io.qameta.allure:allure-selenide:2.21.0'
     testImplementation 'org.slf4j:slf4j-simple:1.7.32'
 
- //   compileJava.options.encoding = 'UTF-8'
-  //  compileTestJava.options.encoding = 'UTF-8'
 }
 
-test {
+tasks.withType(Test) {
     useJUnitPlatform()
+    systemProperties(System.getProperties())
+
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
 }
 
 task run_registr_test(type: Test) {
     useJUnitPlatform {
         includeTags("registration")
     }
+
+}
+
+task run_registr_test_with_params(type: Test) {
+    useJUnitPlatform {
+        includeTags("registration with params")
+    }
+
 }
