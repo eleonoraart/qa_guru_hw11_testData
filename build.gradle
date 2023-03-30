@@ -30,6 +30,7 @@ dependencies {
     testImplementation 'com.github.javafaker:javafaker:1.0.2'
     testImplementation 'io.qameta.allure:allure-selenide:2.21.0'
     testImplementation 'org.slf4j:slf4j-simple:1.7.32'
+    testImplementation "org.aspectj:aspectjweaver:1.9.19"
 
 }
 
@@ -54,7 +55,7 @@ task run_registr_test(type: Test) {
 
 task run_registr_test_with_params(type: Test) {
     useJUnitPlatform {
-        includeTags("registration with params")
+        includeTags("registration_with_params")
     }
 
 }

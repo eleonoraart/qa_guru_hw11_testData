@@ -6,7 +6,7 @@ import static tests.TestData.*;
 
 public class DemoQaPracticeFormTest extends TestBase {
 
-    @Tag("registration with params")
+    @Tag("registration_with_params")
     @Test
     void studentRegistrationTest(){
 
